@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="../php/1.php">
+        <table>
+            <tr>
+                <td>
+                    <label>Product ID : </label>
+                </td>
+
+                <td>
+                    <input type="number" name="pid" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Product Name : </label>
+                </td>
+                <td>
+                    <input type="text" name="name" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Product Price : </label>
+                </td>
+                <td>
+                    <input type="number" name="price" min="1" required />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Discount Percentage : </label>
+                </td>
+                <td>
+                    <input type="number" name="discount" min="0" max="100" required />
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit" style="width: 100%;" />
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+
+</html>
