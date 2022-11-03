@@ -2,12 +2,12 @@
 using namespace std;
 
 int main() {
-    int kb;
+    int mb;
     
-    cout<<"Enter file size (in kb) : ";
-    cin>>kb;
+    cout<<"Enter file size (in mb) : ";
+    cin>>mb;
     
-    cout<<"It will take "<<(kb*1024)/960<<" seconds to transmit the file.";
+    cout<<"It will take "<<(mb*1024*1000)/960<<" seconds to transmit the file.";
         
     return 0;
 }

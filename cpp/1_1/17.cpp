@@ -10,9 +10,13 @@ class Student {
 };
 
 int main(){
-    Student s1("Deep");
-    cout<<"Name of student s1 : "<<s1.name<<endl;
+    string name;
+    cout<<"Enter name : ";
+    cin>>name;
+    
+    Student s1(name);
+    cout<<"Name of student s1 object : "<<s1.name<<endl;
     
     Student s2 = s1;
-    cout<<"Name of student s2 : "<<s2.name;
+    cout<<"Name of student s2 object : "<<s2.name;
 }
