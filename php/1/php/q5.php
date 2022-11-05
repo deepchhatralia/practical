@@ -1,25 +1,16 @@
 <?php
 
-if(isset($_GET['name'])){
-    function decimalToBinary($decimal){
-        $temp = $decimal;
-        $count = 0;
-        $ans = array();
-        
-        while($temp != 0){
-            array_unshift($ans,$temp % 2);
-            $temp = $temp / 2;
-            $count++;
-        }
-        for($i = 0 ; $i < $count ; $i++){
-            echo $ans[$i];
-        }
-    }
-    $binary;
-    $name = $_GET['name'];
+    $id=$_POST['id'];
+    $name=$_POST['name'];
+    $mobNum=$_POST['num'];
 
-    for($i = 0 ; $i < strlen($name) ; $i++){
-        decimalToBinary(ord(substr($name,$i,1)));
-        echo "<br/>";
+    if(isset($_POST['submit'])){
+        $student = fopen("q5.txt",'a+'); 
+        $data = "$id $name $mobNum" . PHP_EOL;
+
+        fwrite($student,$data);
+        fclose($student);
+
+        echo "Saved";
     }
-}
+?>
